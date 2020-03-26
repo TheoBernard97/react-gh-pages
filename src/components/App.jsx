@@ -5,6 +5,7 @@ import Note from "./Note";
 import CreateArea from "./CreateArea";
 
 function App() {
+  const [darkMode, setDarkMode] = React.useState(false);
   const [noteList, setNoteList] = React.useState([]);
 
   function addNote(note) {
@@ -21,9 +22,13 @@ function App() {
     });
   }
 
+  function changeTheme() {
+    setDarkMode(prevTheme => !prevTheme);
+  }
+
   return (
-    <div>
-      <Header />
+    <div className={darkMode === true ? "main-div dark-mode" : "main-div"}>
+      <Header darkMode={darkMode} changeTheme={changeTheme} />
       <CreateArea addNote={addNote} />
       {noteList.map((note, index) => (
         <Note
