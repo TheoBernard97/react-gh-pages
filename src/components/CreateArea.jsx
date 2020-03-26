@@ -18,6 +18,22 @@ function CreateArea(props) {
     });
   }
 
+  function submitNote(event) {
+    event.preventDefault();
+    props.addNote(note);
+    setNote({
+      title: "",
+      content: ""
+    });
+    setCreateAreaActive(false);
+  }
+
+  function handleClick(event) {
+    note.title === "" && note.content === ""
+      ? alert("You can't create an empty note.")
+      : submitNote(event);
+  }
+
   return (
     <div>
       <form className="create-note">
@@ -41,17 +57,7 @@ function CreateArea(props) {
           value={note.content}
         />
         <Zoom in={createAreaActive ? true : false}>
-          <Fab
-            onClick={event => {
-              event.preventDefault();
-              props.addNote(note);
-              setCreateAreaActive(false);
-              setNote({
-                title: "",
-                content: ""
-              });
-            }}
-          >
+          <Fab onClick={handleClick}>
             <AddIcon />
           </Fab>
         </Zoom>
