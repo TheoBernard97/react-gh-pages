@@ -36,7 +36,7 @@ function CreateArea(props) {
 
   return (
     <div>
-      <form className="create-note" autocomplete="off">
+      <form className="create-note" autoComplete="off">
         {createAreaActive && (
           <input
             name="title"
