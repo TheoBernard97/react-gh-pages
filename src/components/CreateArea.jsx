@@ -2,6 +2,8 @@ import React from "react";
 import Zoom from "@material-ui/core/Zoom";
 import Fab from "@material-ui/core/Fab";
 import AddIcon from "@material-ui/icons/Add";
+import Button from "@material-ui/core/Button";
+import DeleteIcon from "@material-ui/icons/Delete";
 
 function CreateArea(props) {
   const [createAreaActive, setCreateAreaActive] = React.useState(false);
@@ -35,7 +37,7 @@ function CreateArea(props) {
   }
 
   return (
-    <div>
+    <div className="create-area">
       <form className="create-note" autoComplete="off">
         {createAreaActive && (
           <input
@@ -62,6 +64,9 @@ function CreateArea(props) {
           </Fab>
         </Zoom>
       </form>
+      <Button className="btn-clear" onClick={() => props.deleteAll()}>
+        <DeleteIcon />
+      </Button>
     </div>
   );
 }

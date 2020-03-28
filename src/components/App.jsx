@@ -14,6 +14,10 @@ function App() {
     });
   }
 
+  function deleteAll() {
+    setNoteList([]);
+  }
+
   function deleteNote(id) {
     setNoteList(prevNotes => {
       return prevNotes.filter((note, index) => {
@@ -29,7 +33,7 @@ function App() {
   return (
     <div className={darkMode === true ? "main-div dark-mode" : "main-div"}>
       <Header darkMode={darkMode} changeTheme={changeTheme} />
-      <CreateArea addNote={addNote} />
+      <CreateArea addNote={addNote} deleteAll={deleteAll} />
       {noteList.map((note, index) => (
         <Note
           key={index}

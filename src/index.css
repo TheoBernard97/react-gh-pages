@@ -80,10 +80,25 @@ footer p {
   outline: none;
 }
 
+.create-area {
+  display: flex;
+  margin: 30px auto 20px;
+  justify-content: center;
+}
+
+.create-area .btn-clear {
+  border: solid 2px #ccc;
+  color: #f5ba13;
+  border-radius: 7px;
+  height: 70px;
+  width: 70px;
+  margin-right: 15px;
+  transition: border-color 1s, background-color 1s;
+}
+
 form.create-note {
   position: relative;
   width: 480px;
-  margin: 30px auto 20px auto;
   background: #fff;
   border: solid 2px #ccc;
   transition: border-color 1s, background-color 1s;
@@ -129,6 +144,12 @@ form.create-note button {
   background: #252525;
   color: #f5ba13;
   transition: color 1s, border-color 1s, background-color 1s;
+}
+
+.dark-mode .create-area .btn-clear {
+  border: solid 2px #202020;
+  background-color: #252525;
+  transition: border-color 1s, background-color 1s;
 }
 
 .dark-mode .create-note {
