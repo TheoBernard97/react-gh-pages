@@ -92,7 +92,7 @@ footer p {
   border-radius: 7px;
   height: 70px;
   width: 70px;
-  margin-right: 15px;
+  margin-left: 10px;
   transition: border-color 1s, background-color 1s;
 }
 
