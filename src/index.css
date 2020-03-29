@@ -179,3 +179,23 @@ form.create-note button {
   color: #ccc;
   transition: color 1s;
 }
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  .create-area {
+    max-width: 90%;
+  }
+
+  .create-area .btn-clear {
+    margin-left: 5px;
+  }
+
+  form.create-note {
+    min-width: auto;
+  }
+
+  .note {
+    width: 90%;
+    margin: 1% 5%;
+  }
+}
