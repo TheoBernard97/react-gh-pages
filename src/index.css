@@ -132,6 +132,11 @@ form.create-note button {
   outline: none;
 }
 
+footer a {
+  text-decoration: none;
+  color: unset;
+}
+
 /* Dark Theme*/
 
 .main-div.dark-mode {
